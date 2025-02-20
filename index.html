@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.google.com/specimen/Pacifico?categoryFilters=Feeling:%2FExpressive%2FCute" rel="stylesheet">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="To-Do-List.css">
+    <script src="To-Do-List.js" defer></script>
+</head>
+<body>
+
+    <!-- Selection Screen -->
+    <div id="Selection-Screen">
+        <h2>Show your To-Do List Type</h2>
+        <button class="modeButton" data-mode="daily">Daily</button>
+        <button class="modeButton" data-mode="weekly">Weekly</button>
+        <button class="modeButton" data-mode="monthly">Monthly</button>
+    </div>
+    <!-- To-Do List Section (Hidden Initially) -->
+    <div id="todoApp" style="display: none;">
+        <!-- <h1 id="modeTitle">Your To-Do List</h1> -->
+        <!-- daily list -->
+        <div id="dailyList" class="list-container" style="display: none;">
+            <div class="daily">
+                <h1>DAILY PLANNER</h1>
+                <input type="text" id="dailyInput" placeholder=" Enter a new task...">
+                <button id="weeklyAdd">Add Task</button>
+                <ul id="dailyTasks"></ul>
+                <button class="go-back">Go Back</button>
+            </div>
+            
+        </div>
+        <!-- weekly List -->
+        <div div id="weeklyList" class="list-container" style="display: none;">
+            <div class="header">
+                <div class="titre">
+                    <h1>WEEKLY PLANNER</h1>
+                    <label for="date">Date :</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+            <div class="days">
+                <div class="day" id="sunday">
+                    <h1>Sunday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder=" Enter a new task...">
+                        <button onclick="addTask('sunday') " id="addButton" >Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="monday">
+                    <h1>Monday</h1>
+                    <div class="day1">
+                        <!-- <ul class="Task-list"></ul> -->
+                        <input type="text" id="taskInput" placeholder=" Enter a new task...">
+                        <button onclick="addTask('monday')" id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="tuesday">
+                    <h1>Tuesday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button onclick="addTask('tuesday')"id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="wednesday">
+                    <h1>Wednesday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button onclick="addTask('wednesday')" id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="thursday">
+                    <h1>Thursday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button onclick="addTask('thursday')" id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="friday">
+                    <h1>Friday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button onclick="addTask('friday')" id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <div class="day" id="saturday">
+                    <h1>Saturday</h1>
+                    <div class="day1">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button onclick="addTask('saturday')" id="addButton">Add</button>
+                    </div>
+                    <ul class="task-list"></ul>
+                </div>
+                <button class="go-back">Go Back</button>
+            </div>
+        </div>
+        <!-- monthly List -->
+        <div id="monthlyList" class="list-container" style="display: none;">
+            <div class="header">
+                <div class="titre">
+                    <h1>MONTHLY PLANNER</h1>
+                    <label for="date">Date :</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+            <div class="months">
+                <div class="month" id="january">
+                    <h1>January</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('january') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="february">
+                    <h1>February</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('february') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="march">
+                    <h1>March</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('march') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="april">
+                    <h1>April</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('april') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="may">
+                    <h1>May</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('may') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="june">
+                    <h1>June</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('june') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="july">
+                    <h1>July</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('july') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="august">
+                    <h1>August</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('august') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="september">
+                    <h1>September</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('september') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="october">
+                    <h1>October</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('october') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="november">
+                    <h1>Novermber</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('november') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <div class="month" id="december">
+                    <h1>December</h1>
+                    <div class="month1">
+                        <input type="text" id="taskInput1" placeholder=" Enter a new task...">
+                        <button onclick="addTask('december') " id="addButton1" >Add</button>
+                    </div>
+                    <ul class="task-list-month"></ul>
+                </div>
+                <button class="go-back">Go Back</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

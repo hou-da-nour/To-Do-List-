@@ -1,0 +1,266 @@
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #c2c5aa;
+}
+
+.header{
+    background-color: #DAD7CD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    padding: 2rem 0 2rem 0;
+    margin-right: 50px;
+    border-radius: 1rem;
+    margin: 5px;
+}
+.titre{
+    padding-left: 1rem;
+    padding-top: 0;
+    display: flex ;
+    flex-direction: column;
+}
+.note{
+    flex-grow: 1;
+    border-radius: 1rem;
+    background-color: #B6AD90;
+    padding-right: 1rem;
+    transform: translateX(-60px);
+}
+.titre h1{
+    text-align: center;
+    word-wrap: break-word;
+    width: 200px;
+    font-family: cursive;
+
+}
+.titre input {
+    font-family: cursive;
+    text-align: center;
+    border-color: transparent;
+    background-color: #DAD7CD;
+}
+p{
+    font-family: cursive;
+    margin: 20px;
+    background-color: #DAD7CD;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 5px;
+}
+.note ul {
+    list-style: disc; 
+    color: #c2c5aa; 
+    font-size: 1.5rem;
+}
+li input {
+    border-color: transparent;
+    flex-grow: 1;
+    background-color: #B6AD90;
+    text-decoration: underline;
+    color: #DAD7CD;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.days , .months{      
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px ,1fr));
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.days h1,.months h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.daily input,.days input ,.months input{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 5px;
+    background-color: #f2e9c9;
+    border-color: transparent;
+}
+.daily button,.day1 button ,.month1 button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #228f3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.day1 ,.month1{
+    display: flex;
+    margin-right: 5px;
+}
+#sunday, #january{
+    background-color: #a4ac86;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#monday, #february{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#tuesday ,#march{
+    background-color: #f0ead2;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#wednesday ,#april{
+    background-color: #DAD7CD;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#thursday, #may{
+    background-color: #a3b18a;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#friday ,#june{
+    background-color: #A3B18A;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+}
+#saturday ,#july{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+#augest{
+    background-color: beige;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+#september{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+#oktober{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+#november{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+#december{
+    background-color: #b6ad90;
+    border-radius: 1rem;
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+ul .task-list ,ul .task-list-month{
+    list-style: disc; 
+    color: #c2c5aa;
+}
+#dailyTasks button,.task-list button, .task-list-month button {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+#Selection-Screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blurred background effect */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: #dad7cd;
+}
+.modeButton{
+    font-family: cursive;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    margin: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modeButton:hover{
+    background-color: green;
+}
+h2{
+    font-family: cursive;
+}
+.daily {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blurred background effect */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: #e9edc9;
+}
+.daily h1 {
+    font-family: cursive;
+}
+ 
+.go-back {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.daily .go-back{
+    transform: translateX(50%);
+}
+.go-back:hover {
+    background-color: #cc0000;
+}
+
+
+
+/* Small screens */
+@media (min-width : 768px){
+    .list-container{
+        width: 750px;  
+        
+
+    }
+ }
+ /* Medium screens */
+ @media (min-width : 992px){
+     .list-container{
+         width: 970px;
+     }
+ }
+ /* Large screens */
+ @media (min-width : 1200px){
+    .list-container{
+         width: 1170px;
+     }
+ }
+
