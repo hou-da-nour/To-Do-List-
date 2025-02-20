@@ -235,7 +235,7 @@ h2{
     transition: 0.3s;
 }
 .daily .go-back{
-    transform: translateX(50%);
+    transform: translateX(60%);
 }
 .go-back:hover {
     background-color: #cc0000;
